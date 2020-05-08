@@ -1,0 +1,129 @@
+//---- Flex
+@mixin flex($option: false) {
+	@if $option == 'inline' {
+		display: -ms-inline-flexbox;
+		display: -webkit-inline-flex;
+		display: inline-flex;
+	} @else {
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+	}
+}
+
+@mixin flex_wrap($value) {
+	-ms-flex-wrap: $value;
+	-webkit-flex-wrap: $value;
+	flex-wrap: $value;
+}
+
+@mixin flex_align_items($value) {
+	-ms-align-items: $value;
+	-webkit-align-items: $value;
+	align-items: $value;
+}
+
+@mixin flex_justify($value) {
+	-ms-justify-content: $value;
+	-webkit-justify-content: $value;
+	justify-content: $value;
+}
+
+@mixin flex_grow($value) {
+	-ms-flex-grow: $value;
+	-webkit-flex-grow: $value;
+	flex-grow: $value;
+}
+
+@mixin flex_shrink($value) {
+	-ms-flex-shrink: $value;
+	-webkit-flex-shrink: $value;
+	flex-shrink: $value;
+}
+
+@mixin flex_direction($value) {
+	-ms-flex-direction: $value;
+	-webkit-flex-direction: $value;
+	flex-direction: $value;
+}
+
+@mixin flex_order($value) {
+	-ms-order: $value;
+	-webkit-order: $value;
+	order: $value;
+}
+
+@mixin flex_center() {
+	@include flex(flex);
+	@include flex_align_items(center);
+	@include flex_justify(center);
+}
+
+
+//---- Rem
+@mixin rem($size) {
+  font-size: $size;
+  font-size: calculate_rem($size);
+}
+
+
+
+//---- Transform
+@mixin transform($value) {
+	@if $value {
+		-ms-transform: $value;
+		-webkit-transform: $value;
+		transform: $value;
+	}
+}
+
+@mixin transform_origin($value) {
+	@if $value {
+		-ms-transform-origin: $value;
+		-webkit-transform-origin: $value;
+		transform-origin: $value;
+	}
+}
+
+
+//---- Filter
+@mixin filter($value) {
+	@if $value {
+		-ms-filter: $value;
+		-webkit-filter: $value;
+		filter: $value;
+	}
+}
+
+
+//---- Transition
+@mixin transition($values...) {
+	@if $values {
+		-ms-transition: $values;
+		-webkit-transition: $values;
+		transition: $values;
+	}
+}
+
+//---- Stroke Text
+@mixin stroke_txt($color, $fill, $width: 1.5px) {
+	color: $color;
+	-webkit-text-fill-color: $fill;
+	-webkit-text-stroke-width: $width;
+	-webkit-text-stroke-color: $color;
+}
+
+//---- Spacing
+@mixin spacing($property, $size) {
+	@media screen and (min-width: map-get($breakpoints, tablet-1) + 1) {
+		#{$property} : map-get($spacing-1, $size);
+	}
+
+	@media screen and (min-width: map-get($breakpoints, mobile-1) + 1) and (max-width: map-get($breakpoints, tablet-1)) {
+		#{$property} : map-get($spacing-2, $size);
+	}
+
+	@media screen and (max-width: map-get($breakpoints, mobile-1)) {
+		#{$property} : map-get($spacing-3, $size);
+	}
+}

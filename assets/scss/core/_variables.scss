@@ -1,0 +1,78 @@
+//---- Fonts
+$fonts: (
+	1: (
+		family : 'Work Sans',
+		light  : 300,
+		regular: 400,
+		bold   : 600
+	),
+	2: (
+		family : 'Work Sans',
+		light  : 300,
+		regular: 400,
+		bold   : 600
+	)
+);
+
+//---- Text Colors
+$text-color:    #fff; // White
+$heading-color: #fff; // White
+
+//---- Colors
+$ui-color-1: #000; // Black
+$ui-color-2: #fff; // White
+
+//---- Sections
+$section-percent: 92%;
+
+$sections: (
+	1: (
+		small  : 790px,
+		medium : 990px,
+		large  : 1200px,
+		huge   : 1600px,
+		max    : 2000px
+	)
+);
+
+//---- Spacing
+$spacings: (
+	1: (
+		mini   : 20px,
+		tiny   : 40px,
+		small  : 50px,
+		medium : 80px,
+		large  : 120px,
+		huge   : 250px
+	),
+	2: (
+		mini   : 20px,
+		tiny   : 30px,
+		small  : 40px,
+		medium : 60px,
+		large  : 80px,
+		huge   : 80px
+	)
+);
+
+$grid-spacing: 3%;
+$grid-columns: 12;
+
+//---- Breakpoints
+$breakpoints: (
+	laptop-1: 1920px,
+	laptop-2: 1440px,
+	tablet-1: 1024px,
+	tablet-2: 768px,
+	mobile-1: 670px,
+	mobile-2: 350px
+);
+
+//---- Other
+$form-field-height: 55px;
+$border-radius:     4px;
+$z-index: (
+	1: 100,
+	2: 75,
+	3: 50
+)

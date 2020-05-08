@@ -1,0 +1,45 @@
+.logo {
+    text-decoration: none;
+    
+    svg {
+        fill: #fff;
+    }
+}
+
+.logo--has-txt {
+    @include flex();
+    @include flex_align_items(center);
+}
+
+// Responsive
+@media screen and (min-width: map-get($breakpoints, mobile-1) + 1) {
+    .logo {
+        svg {
+            width: 60px;
+            height: 60px;
+        }
+    }
+
+    .logo--has-txt {
+        h1 {
+            @include rem(30px);
+            margin-left: 25px;
+        }
+    }
+}
+
+@media screen and (max-width: map-get($breakpoints, mobile-1)) {
+    .logo {
+        svg {
+            width: 30px;
+            height: 30px;
+        }
+    }
+
+    .logo--has-txt {
+        h1 {
+            @include rem(20px);
+            margin-left: 15px;
+        }
+    }
+}

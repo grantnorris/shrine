@@ -1,0 +1,100 @@
+body {
+	font-family: map-get(map-get($fonts, 1), family);
+	font-weight: map-get(map-get($fonts, 2), light);
+	color: $text-color;
+	font-size: 16px; // Don't Change
+	font-variant-ligatures: no-common-ligatures;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: map-get(map-get($fonts, 2), family);
+	font-weight: map-get(map-get($fonts, 2), regular);
+	color: $heading-color;
+	line-height: 140%;
+
+	a {
+		color: $heading-color;
+	}
+}
+
+address {
+	font-style: normal;
+}
+
+a {
+	color: $text-color;
+}
+
+// Responsive
+@media screen and (min-width: map-get($breakpoints, mobile-1) + 1) {
+	h1, .h1 { @include rem(62px); }
+	h2, .h2 { @include rem(52px); }
+	h3, .h3 { @include rem(42px); }
+	h4, .h4 { @include rem(36px); }
+	h5, .h5 { @include rem(26px); }
+	h6, .h6 { @include rem(22px); }
+
+	p,
+	address,
+	li {
+		@include rem(22px);
+		line-height: 160%;
+	}
+
+    .txt-large {
+		&,
+		p,
+		li,
+		address {
+			@include rem(36px);
+		}
+	}
+	
+	.txt-small {
+		&,
+		p,
+		li,
+		address {
+			@include rem(18px);
+		}
+	}
+}
+
+@media screen and (max-width: map-get($breakpoints, mobile-1)) {
+    h1, .h1 { @include rem(42px); }
+	h2, .h2 { @include rem(32px); }
+	h3, .h3 { @include rem(28px); }
+	h4, .h4 { @include rem(26px); }
+	h5, .h5 { @include rem(22px); }
+	h6, .h6 { @include rem(20px); }
+
+	p,
+	address,
+	li {
+		@include rem(20px);
+		line-height: 160%;
+	}
+
+    .txt-large {
+		&,
+		p,
+		li,
+		address {
+			@include rem(26px);
+		}
+	}
+	
+	.txt-small {
+		&,
+		p,
+		li,
+		address {
+			@include rem(16px);
+		}
+	}
+}

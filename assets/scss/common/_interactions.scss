@@ -1,0 +1,14 @@
+a {
+    transition: opacity ease .4s;
+
+    &:hover {
+        opacity: .6;
+    }
+}
+
+
+@media (hover: none) {
+    a:nth-child(n) {
+        opacity: inherit;
+    }
+}

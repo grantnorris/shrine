@@ -1,0 +1,24 @@
+.landing-view {
+    @include flex_center();
+    min-height: 100vh;
+}
+
+.landing-view__img {
+    pointer-events: none;
+    user-select: none;
+}
+
+// Responsive
+@media screen and (min-width: map-get($breakpoints, mobile-1) + 1) {
+    .landing-view__img {
+        height: 450px;
+        max-height: 60vh;
+    }
+}
+
+@media screen and (max-width: map-get($breakpoints, mobile-1)) {
+    .landing-view__img {
+        width: 450px;
+        max-width: 60vw;
+    }
+}

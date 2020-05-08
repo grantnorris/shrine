@@ -1,0 +1,79 @@
+@media screen and (min-width: map-get($breakpoints, mobile-1) + 1) {
+    @each $spacing-name, $spacing in map-get($spacings, 1) {
+        // Padding
+        .pt-#{$spacing-name} {
+            padding-top: $spacing;
+        }
+
+        .pb-#{$spacing-name} {
+            padding-bottom: $spacing;
+        }
+        
+        .pv-#{$spacing-name} {
+            padding-top: $spacing;
+            padding-bottom: $spacing;
+        }
+
+        .p-#{$spacing-name} {
+            padding: $spacing;
+        }
+
+        // Margin
+        .mt-#{$spacing-name} {
+            margin-top: $spacing;
+        }
+
+        .mb-#{$spacing-name} {
+            margin-bottom: $spacing;
+        }
+        
+        .mv-#{$spacing-name} {
+            margin-top: $spacing;
+            margin-bottom: $spacing;
+        }
+
+        .m-#{$spacing-name} {
+            margin: $spacing;
+        }
+    }
+}
+
+@media screen and (max-width: map-get($breakpoints, mobile-1)) {
+    @each $spacing-name, $spacing in map-get($spacings, 2) {
+        // Padding
+        .pt-#{$spacing-name} {
+            padding-top: $spacing;
+        }
+
+        .pb-#{$spacing-name} {
+            padding-bottom: $spacing;
+        }
+        
+        .pv-#{$spacing-name} {
+            padding-top: $spacing;
+            padding-bottom: $spacing;
+        }
+
+        .p-#{$spacing-name} {
+            padding: $spacing;
+        }
+
+        // Margin
+        .mt-#{$spacing-name} {
+            margin-top: $spacing;
+        }
+
+        .mb-#{$spacing-name} {
+            margin-bottom: $spacing;
+        }
+        
+        .mv-#{$spacing-name} {
+            margin-top: $spacing;
+            margin-bottom: $spacing;
+        }
+
+        .m-#{$spacing-name} {
+            margin: $spacing;
+        }
+    }
+}

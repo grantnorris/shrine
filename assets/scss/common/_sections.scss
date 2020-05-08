@@ -1,0 +1,11 @@
+.section {
+    width: $section-percent;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@each $section-name, $width in map-get($sections, 1) {
+    .section--#{$section-name} {
+        max-width: $width;
+    }
+}

@@ -1,0 +1,22 @@
+//---- Image URL
+@function image-url($path) {
+  	@return url('../img/#{$path}');
+}
+
+//---- Calculate rem
+@function calculate_rem($size) {
+  $rem-size: $size / 16px;
+  @return $rem-size * 1rem;
+}
+
+//---- Calculate Grid Column
+@function calculate_grid_col($i) {
+	$width: (100% / $grid-columns * $i) - ($grid-spacing * ($grid-columns - $i) / $grid-columns);
+	@return $width;
+}
+
+//---- Delay
+@function calculate_delay($n, $multiplier, $base) {
+	$delay: $n * $multiplier + $base * 1s;
+	@return $delay;
+}
