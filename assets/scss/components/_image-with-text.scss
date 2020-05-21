@@ -1,13 +1,30 @@
-.img-w-txt {
-    @include flex;
-    @include flex_align_items(center);
+// Responsive
+@media screen and (min-width: map-get($breakpoints, mobile-1) + 1) {
+    .img-w-txt {
+        @include flex;
+        @include flex_align_items(center);
+    }
+    
+    .img-w-txt__visual {
+        @include calc_grid_col(4);
+    }
+    
+    .img-w-txt__content {
+        @include calc_grid_col(7);
+        margin-left: auto;
+    }
 }
 
-.img-w-txt__visual {
-    @include calc_grid_col(4);
-}
+@media screen and (max-width: map-get($breakpoints, mobile-1)) {
+    .img-w-txt__visual {
+        img {
+            max-width: 280px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
 
-.img-w-txt__content {
-    @include calc_grid_col(7);
-    margin-left: auto;
+    .img-w-txt__content {
+        margin-top: 30px;
+    }
 }
