@@ -1,22 +1,23 @@
 // Core
 @import 
-	'core/reset.scss',
-	'core/variables.scss',
-	'core/extends.scss',
-	'core/functions.scss',
-	'core/mixins.scss',
-	'core/typography.scss';
+	'core/reset',
+	'core/variables',
+	'core/extends',
+	'core/functions',
+	'core/mixins',
+	'core/typography';
 
 // Common
 @import
-	'common/sections.scss',
-	'common/spacing.scss',
-	'common/helpers.scss',
-	'common/txt-content.scss',
-	'common/interactions.scss';
+	'common/sections',
+	'common/spacing',
+	'common/helpers',
+	'common/txt-content',
+	'common/interactions';
 
 // Components
 @import
-	'components/footer.scss',
-	'components/landing-view.scss',
-	'components/logo.scss';
+	'components/footer',
+	'components/landing-view',
+	'components/logo',
+	'components/image-with-text';

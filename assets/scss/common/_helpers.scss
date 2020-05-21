@@ -6,3 +6,7 @@ img {
     max-width: 100%;
     display: block;
 }
+
+.width-half {
+    @include calc_grid_col(6);
+}

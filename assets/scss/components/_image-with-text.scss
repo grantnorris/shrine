@@ -1,0 +1,13 @@
+.img-w-txt {
+    @include flex;
+    @include flex_align_items(center);
+}
+
+.img-w-txt__visual {
+    @include calc_grid_col(4);
+}
+
+.img-w-txt__content {
+    @include calc_grid_col(7);
+    margin-left: auto;
+}

@@ -59,14 +59,11 @@
 	@include flex_justify(center);
 }
 
-
 //---- Rem
 @mixin rem($size) {
   font-size: $size;
   font-size: calculate_rem($size);
 }
-
-
 
 //---- Transform
 @mixin transform($value) {
@@ -85,7 +82,6 @@
 	}
 }
 
-
 //---- Filter
 @mixin filter($value) {
 	@if $value {
@@ -94,7 +90,6 @@
 		filter: $value;
 	}
 }
-
 
 //---- Transition
 @mixin transition($values...) {
@@ -126,4 +121,9 @@
 	@media screen and (max-width: map-get($breakpoints, mobile-1)) {
 		#{$property} : map-get($spacing-3, $size);
 	}
+}
+
+//---- Grid Column
+@mixin calc_grid_col($cols) {
+	width: calculate_grid_col($cols);
 }

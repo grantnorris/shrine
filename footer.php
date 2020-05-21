@@ -19,6 +19,10 @@
 							<li class="footer__col-list-item">
 								<a href="<?= home_dir() . '/contact'; ?>">Contact</a>
 							</li>
+
+							<li class="footer__col-list-item">
+								<a href="<?= home_dir() . '/hiatus'; ?>">Hiatus</a>
+							</li>
 						</ul>
 					</nav>
 
