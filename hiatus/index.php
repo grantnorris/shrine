@@ -14,7 +14,7 @@
             <p>Hiatus is an arcade style block breaker with a lo-fi inspired soundtrack and aesthetic. Our goal in Hiatus was to create a simple, captivating experience drenched in replayability.</p>
 
             <p>
-                <a href="#">
+                <a href="https://apps.apple.com/gb/app/hiatus/id1493350890" target="_blank">
                     <img src="../assets/img/app-store.svg" alt="Download on the App Store">
                 </a>
             </p>
